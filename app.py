@@ -4,12 +4,11 @@ sys.path.append(os.path.dirname(os.path.realpath(__file__)) + '/')
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + '/modules/')
 sys.path.append(os.path.dirname(os.path.realpath(__file__)) + '/modules/qualisys_python_sdk')
 
-from PySide2 import QtWidgets
-from PySide2 import QtNetwork
-from PySide2 import QtUiTools
-from PySide2 import QtCore
-from PySide2 import QtGui
-from Qt import __binding__
+from PySide6 import QtWidgets
+from PySide6 import QtNetwork
+from PySide6 import QtUiTools
+from PySide6 import QtCore
+from PySide6 import QtGui
 
 import maya.api.OpenMaya as om
 import maya.api.OpenMayaAnim as omanim
@@ -42,13 +41,7 @@ MAYA = False
 
 try:
     import maya.OpenMayaUI as OpenMayaUI
-
-    if __binding__ in ('PySide2', 'PyQt5'):
-        from shiboken2 import wrapInstance
-    elif __binding__ in ('PySide', 'PyQt4'):
-        from shiboken import wrapInstance
-    else:
-        _print_error('Cannot find Qt bindings.')
+    from shiboken6 import wrapInstance
 
     MAYA = True
 except:

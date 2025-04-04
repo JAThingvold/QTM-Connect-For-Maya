@@ -1,7 +1,7 @@
 import hashlib, os
 
-from PySide2 import QtGui
-from PySide2 import QtWidgets
+from PySide6 import QtGui
+from PySide6 import QtWidgets
 
 import maya.cmds as cmds
 import maya.api.OpenMaya as om

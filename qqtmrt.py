@@ -1,7 +1,7 @@
 import json
-from Qt import QtNetwork
-from Qt import QtCore
-from Qt.QtCore import Signal, Property
+from PySide6 import QtNetwork
+from PySide6  import QtCore
+from PySide6.QtCore import Signal, Property
 
 import xml2json
 from qtmparser import QtmParser
